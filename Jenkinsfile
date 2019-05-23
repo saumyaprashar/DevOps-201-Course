@@ -1,11 +1,11 @@
 node {
    def mvnHome
    def app
-   stage('Preparation') { 
+   stage('Checkout') { 
       git 'https://github.com/saumyaprashar/DevOps-201-Course.git'
       mvnHome = tool 'MAVEN_HOME'
    }
-stage ('App Build') {
+stage ('Build') {
        sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
 
