@@ -2,7 +2,7 @@ node {
    def mvnHome
    def app
    stage('Preparation') { 
-      git ''
+      git 'https://github.com/saumyaprashar/DevOps-201-Course.git'
       mvnHome = tool 'MAVEN_HOME'
    }
 stage ('App Build') {
